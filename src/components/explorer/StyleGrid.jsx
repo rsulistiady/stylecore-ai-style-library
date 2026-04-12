@@ -11,8 +11,8 @@ export default function StyleGrid({ styles }) {
 
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-      {styles.map((style) => (
-        <StyleCard key={style.id} style={style} />
+      {styles.map((style, index) => (
+        <StyleCard key={style?.id || `${style?.name || 'style'}-${index}`} style={style} />
       ))}
     </div>
   );

@@ -8,18 +8,34 @@ const fallback = {
   texture: 'carefully selected surface detail',
 };
 
-export function buildPrompt(config) {
-  const {
-    subject = fallback.subject,
-    style = fallback.style,
-    substyle = fallback.substyle,
-    camera = fallback.camera,
-    lighting = fallback.lighting,
-    mood = fallback.mood,
-    texture = fallback.texture,
-  } = config || {};
+function cleanValue(value, defaultValue) {
+  const normalized = String(value || '').trim();
+  return normalized || defaultValue;
+}
 
-  return `Create ${subject}, in the style of ${style}, with ${substyle}, using ${camera}, lit by ${lighting}, expressing ${mood}, enhanced with ${texture}, highly detailed, visually striking, premium composition.`;
+export function buildPrompt(config) {
+  const subject = cleanValue(config?.subject, fallback.subject);
+  const style = cleanValue(config?.style, fallback.style);
+  const substyle = cleanValue(config?.substyle, fallback.substyle);
+  const camera = cleanValue(config?.camera, fallback.camera);
+  const lighting = cleanValue(config?.lighting, fallback.lighting);
+  const mood = cleanValue(config?.mood, fallback.mood);
+  const texture = cleanValue(config?.texture, fallback.texture);
+
+  const segments = [
+    `Create ${subject}`,
+    `in the style of ${style}`,
+    `with ${substyle}`,
+    `using ${camera}`,
+    `lit by ${lighting}`,
+    `expressing ${mood}`,
+    `enhanced with ${texture}`,
+    'highly detailed',
+    'visually striking',
+    'premium composition',
+  ];
+
+  return `${segments.join(', ')}.`;
 }
 
 export default buildPrompt;

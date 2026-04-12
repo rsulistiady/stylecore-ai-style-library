@@ -1,16 +1,27 @@
 export function exportConfigAsJson(payload) {
-  const content = JSON.stringify(payload, null, 2);
-  const blob = new Blob([content], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
+  if (typeof window === 'undefined' || typeof document === 'undefined') {
+    return false;
+  }
 
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = `stylecore-config-${Date.now()}.json`;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  try {
+    const content = JSON.stringify(payload, null, 2);
+    const blob = new Blob([content], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
 
-  URL.revokeObjectURL(url);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `stylecore-config-${Date.now()}.json`;
+    link.style.display = 'none';
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    setTimeout(() => URL.revokeObjectURL(url), 0);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 export default exportConfigAsJson;

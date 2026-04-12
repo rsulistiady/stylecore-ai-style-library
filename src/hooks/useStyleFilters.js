@@ -4,9 +4,9 @@ import { filterStylesByCategory, getCategoriesFromStyles } from '../utils/filter
 export function useStyleFilters(styles) {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = useMemo(() => getCategoriesFromStyles(styles), [styles]);
+  const categories = useMemo(() => getCategoriesFromStyles(styles || []), [styles]);
   const filteredStyles = useMemo(
-    () => filterStylesByCategory(styles, activeCategory),
+    () => filterStylesByCategory(styles || [], activeCategory),
     [styles, activeCategory],
   );
 

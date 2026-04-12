@@ -1,20 +1,10 @@
-import styles from '../../data/styles';
-import cameras from '../../data/cameras';
-import lighting from '../../data/lighting';
-import moods from '../../data/moods';
-import textures from '../../data/textures';
 import viralFormulas from '../../data/viralFormulas';
+import { getDashboardStats } from '../../utils/dashboardStats';
 import StatsCard from './StatsCard';
 import ViralFormulaCard from './ViralFormulaCard';
 
 export default function DashboardHome() {
-  const stats = [
-    { label: 'Total Styles', value: styles.length },
-    { label: 'Camera Presets', value: cameras.length },
-    { label: 'Lighting Presets', value: lighting.length },
-    { label: 'Mood Profiles', value: moods.length },
-    { label: 'Texture Layers', value: textures.length },
-  ];
+  const stats = getDashboardStats();
 
   return (
     <div className="space-y-8">
@@ -28,15 +18,15 @@ export default function DashboardHome() {
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
         {stats.map((stat) => (
-          <StatsCard key={stat.label} label={stat.label} value={stat.value} />
+          <StatsCard key={stat.id} label={stat.label} value={stat.value} />
         ))}
       </section>
 
       <section>
         <h3 className="mb-4 text-xl font-semibold">Viral Style Formulas</h3>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {viralFormulas.map((formula) => (
-            <ViralFormulaCard key={formula.name} item={formula} />
+          {viralFormulas.map((formula, index) => (
+            <ViralFormulaCard key={`${formula.name}-${index}`} item={formula} />
           ))}
         </div>
       </section>
