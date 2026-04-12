@@ -1,0 +1,28 @@
+export const moods = [
+  { id: 'silent-rage', name: 'Silent Rage', cues: 'Tension in posture, restrained fury, focused eyes.' },
+  { id: 'calm-before-chaos', name: 'Calm Before Chaos', cues: 'Still frame, charged atmosphere, suspended motion.' },
+  { id: 'melancholy', name: 'Melancholy', cues: 'Muted palette, introspective framing, soft contrast.' },
+  { id: 'hope-rising', name: 'Hope Rising', cues: 'Upward gaze, brighter gradients, directional light.' },
+  { id: 'heroic-resolve', name: 'Heroic Resolve', cues: 'Firm stance, confidence lines, determined expression.' },
+  { id: 'majestic', name: 'Majestic', cues: 'Grand composition, elevated perspective, controlled symmetry.' },
+  { id: 'mysterious', name: 'Mysterious', cues: 'Partial reveal, deep shadows, implied narrative.' },
+  { id: 'ominous', name: 'Ominous', cues: 'Dark values, looming forms, uneasy spacing.' },
+  { id: 'serene', name: 'Serene', cues: 'Balanced negative space, gentle transitions, quiet colors.' },
+  { id: 'nostalgic', name: 'Nostalgic', cues: 'Warm/cool memory tones, grain, archival cues.' },
+  { id: 'romantic', name: 'Romantic', cues: 'Soft focus, flowing shapes, intimate gestures.' },
+  { id: 'whimsical', name: 'Whimsical', cues: 'Playful motion, charming details, lighthearted rhythm.' },
+  { id: 'oppressive', name: 'Oppressive', cues: 'Compressed framing, heavy shadows, dense atmosphere.' },
+  { id: 'apocalyptic', name: 'Apocalyptic', cues: 'Destruction cues, high contrast sky, scarcity motifs.' },
+  { id: 'divine', name: 'Divine', cues: 'Radiant light, sacred geometry, elevated symbolism.' },
+  { id: 'corrupted', name: 'Corrupted', cues: 'Distorted forms, contaminated palette, decay details.' },
+  { id: 'predatory', name: 'Predatory', cues: 'Focused stare, stalking posture, sharp silhouette.' },
+  { id: 'intimate', name: 'Intimate', cues: 'Close framing, subtle expression, warm or low-key light.' },
+  { id: 'lonely', name: 'Lonely', cues: 'Negative space, isolated subject, distant depth.' },
+  { id: 'rebellious', name: 'Rebellious', cues: 'Asymmetric framing, defiant posture, disruptive accents.' },
+  { id: 'triumphant', name: 'Triumphant', cues: 'Upward motion, spotlighting, clear heroic center.' },
+  { id: 'eerie', name: 'Eerie', cues: 'Uncanny calm, unnatural light, subtle distortion.' },
+  { id: 'sacred', name: 'Sacred', cues: 'Ritual framing, reverent tone, symbolic motifs.' },
+  { id: 'brutal', name: 'Brutal', cues: 'Raw force, hard contrast, impact-focused composition.' },
+];
+
+export default moods;

@@ -1,0 +1,28 @@
+export const lighting = [
+  { id: 'cinematic-lighting', name: 'Cinematic Lighting', mood: 'Polished dramatic depth.', pairs: ['Cinematic Still', 'Noir'] },
+  { id: 'soft-studio-lighting', name: 'Soft Studio Lighting', mood: 'Clean and flattering.', pairs: ['Fashion Editorial', 'Minimalist'] },
+  { id: 'hard-light', name: 'Hard Light', mood: 'Sharp and intense.', pairs: ['Brutalist Graphic Design', 'Cyberpunk'] },
+  { id: 'rim-lighting', name: 'Rim Lighting', mood: 'Heroic edge separation.', pairs: ['Space Opera', 'Hyperrealism'] },
+  { id: 'backlight', name: 'Backlight', mood: 'Silhouetted and atmospheric.', pairs: ['Mythic / Divine', 'Dreamcore / Liminal'] },
+  { id: 'volumetric-god-rays', name: 'Volumetric Light / God Rays', mood: 'Sacred and epic.', pairs: ['High Fantasy', 'Angelcore'] },
+  { id: 'golden-hour', name: 'Golden Hour', mood: 'Warm and nostalgic.', pairs: ['Documentary Realism', 'Cottagecore'] },
+  { id: 'blue-hour', name: 'Blue Hour', mood: 'Quiet melancholy.', pairs: ['Noir', 'Dreamcore / Liminal'] },
+  { id: 'moonlight', name: 'Moonlight', mood: 'Mystical nocturnal calm.', pairs: ['Dark Fantasy', 'Gothic'] },
+  { id: 'candlelight', name: 'Candlelight', mood: 'Intimate and sacred.', pairs: ['Dark Academia', 'Baroque'] },
+  { id: 'firelight', name: 'Firelight', mood: 'Raw heat and urgency.', pairs: ['Dark Fantasy', 'Dieselpunk'] },
+  { id: 'neon-lighting', name: 'Neon Lighting', mood: 'Electric and urban.', pairs: ['Cyberpunk', 'Synthwave / Retrowave'] },
+  { id: 'practical-indoor', name: 'Practical Indoor Lighting', mood: 'Lived-in realism.', pairs: ['Documentary Realism', 'Cinematic Still'] },
+  { id: 'chiaroscuro', name: 'Chiaroscuro', mood: 'Dramatic light-dark tension.', pairs: ['Renaissance Painting', 'Noir'] },
+  { id: 'rembrandt-lighting', name: 'Rembrandt Lighting', mood: 'Classical portrait authority.', pairs: ['Oil Painting', 'Fashion Editorial'] },
+  { id: 'butterfly-lighting', name: 'Butterfly Lighting', mood: 'Glamour-forward elegance.', pairs: ['Fashion Editorial', 'Perfume Editorial Aesthetic'] },
+  { id: 'split-lighting', name: 'Split Lighting', mood: 'Duality and tension.', pairs: ['Horror Cinematic', 'Noir'] },
+  { id: 'underlighting', name: 'Underlighting', mood: 'Uneasy and sinister.', pairs: ['Eldritch Horror', 'Occult / Esoteric'] },
+  { id: 'overcast-daylight', name: 'Overcast Daylight', mood: 'Soft neutral realism.', pairs: ['Documentary Realism', 'Toy Photography Aesthetic'] },
+  { id: 'storm-flash-lightning', name: 'Storm Flash / Lightning', mood: 'Violent atmospheric shock.', pairs: ['Apocalyptic', 'Space Opera'] },
+  { id: 'bioluminescent-glow', name: 'Bioluminescent Glow', mood: 'Organic wonder.', pairs: ['Biopunk', 'Fairycore'] },
+  { id: 'holographic-light', name: 'Holographic Light', mood: 'Futurist iridescence.', pairs: ['Y2K Aesthetic', 'Retrofuturism'] },
+  { id: 'red-emergency-light', name: 'Red Emergency Light', mood: 'Urgency and danger.', pairs: ['Brutalist Sci-Fi', 'Horror Cinematic'] },
+  { id: 'sunset-backlight', name: 'Sunset Backlight', mood: 'Heroic closure and drama.', pairs: ['High Fantasy', 'Space Opera'] },
+];
+
+export default lighting;

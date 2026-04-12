@@ -1,0 +1,27 @@
+export const cameras = [
+  { id: 'extreme-close-up', name: 'Extreme Close-Up', impact: 'Reveals fine detail and emotional intensity.', useCase: 'Eyes, jewelry, texture-led storytelling.' },
+  { id: 'close-up', name: 'Close-Up', impact: 'Focuses on character emotion and detail.', useCase: 'Portrait moments and key expressions.' },
+  { id: 'medium-close-up', name: 'Medium Close-Up', impact: 'Balances expression and environment.', useCase: 'Dialog scenes and character intros.' },
+  { id: 'medium-shot', name: 'Medium Shot', impact: 'Natural balance for body language and context.', useCase: 'Versatile narrative scenes.' },
+  { id: 'cowboy-shot', name: 'Cowboy Shot', impact: 'Adds cinematic tension around hands and stance.', useCase: 'Action intros and stylized character posters.' },
+  { id: 'full-body-shot', name: 'Full Body Shot', impact: 'Captures full silhouette and styling.', useCase: 'Character design showcases and fashion visuals.' },
+  { id: 'long-shot', name: 'Long Shot', impact: 'Places subject within environment.', useCase: 'Worldbuilding and travel frames.' },
+  { id: 'extreme-long-shot', name: 'Extreme Long Shot', impact: 'Emphasizes scale and isolation.', useCase: 'Epic landscapes and cinematic establishing shots.' },
+  { id: 'eye-level', name: 'Eye-Level', impact: 'Neutral and relatable perspective.', useCase: 'Documentary and grounded storytelling.' },
+  { id: 'low-angle', name: 'Low Angle', impact: 'Adds dominance and heroic tension.', useCase: 'Power portraits and villain reveals.' },
+  { id: 'high-angle', name: 'High Angle', impact: 'Introduces vulnerability or overview.', useCase: 'Dramatic scenes and environmental reads.' },
+  { id: 'birds-eye-view', name: 'Bird’s-Eye View', impact: 'Graphic top perspective with strong composition.', useCase: 'Map-like scenes and choreography visualization.' },
+  { id: 'worms-eye-view', name: 'Worm’s-Eye View', impact: 'Creates imposing scale from below.', useCase: 'Architecture, giant characters, heroic moments.' },
+  { id: 'dutch-angle', name: 'Dutch Angle', impact: 'Injects unease and kinetic energy.', useCase: 'Thrillers, action, surreal moments.' },
+  { id: 'over-the-shoulder', name: 'Over-the-Shoulder', impact: 'Adds narrative perspective and immersion.', useCase: 'Conversations, reveal shots, mission scenes.' },
+  { id: 'top-down', name: 'Top-Down', impact: 'Clarifies object relationships and layout.', useCase: 'Tabletop scenes, product setups, tactical visuals.' },
+  { id: '35mm-lens', name: '35mm Lens', impact: 'Natural cinematic field of view.', useCase: 'General narrative scenes and environmental portraiture.' },
+  { id: '50mm-lens', name: '50mm Lens', impact: 'Balanced perspective with natural compression.', useCase: 'Portraits and realistic editorial work.' },
+  { id: '85mm-portrait-lens', name: '85mm Portrait Lens', impact: 'Flattering portrait compression and separation.', useCase: 'Premium character and fashion portraits.' },
+  { id: '135mm-telephoto', name: '135mm Telephoto', impact: 'Strong compression and dramatic subject isolation.', useCase: 'Cinematic portraits and distant details.' },
+  { id: '24mm-wide-lens', name: '24mm Wide Lens', impact: 'Broad perspective with dynamic depth.', useCase: 'Environmental portrait and architecture scenes.' },
+  { id: '14mm-ultra-wide-lens', name: '14mm Ultra Wide Lens', impact: 'Extreme perspective and spatial drama.', useCase: 'Epic interiors, sci-fi spaces, surreal visuals.' },
+  { id: 'anamorphic-lens', name: 'Anamorphic Lens', impact: 'Cinematic horizontal flare and premium film language.', useCase: 'Hero stills and dramatic cinematic frames.' },
+];
+
+export default cameras;
