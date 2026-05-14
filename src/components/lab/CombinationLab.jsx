@@ -25,6 +25,7 @@ const initialState = {
 
 export default function CombinationLab() {
   const [config, setConfig] = useState(initialState);
+  const [status, setStatus] = useState('');
 
   const styleOptions = useMemo(() => mapDatasetToNameOptions(styles), []);
   const cameraOptions = useMemo(() => mapDatasetToNameOptions(cameras), []);
@@ -45,24 +46,31 @@ export default function CombinationLab() {
   const { prompt, epicScore } = usePromptBuilder(config);
 
   const updateConfig = (key, value) => {
+    setStatus('');
     setConfig((prev) => ({ ...prev, [key]: value }));
   };
 
-  const resetForm = () => setConfig(initialState);
+  const resetForm = () => {
+    setConfig(initialState);
+    setStatus('Configuration reset.');
+  };
 
   const copyPrompt = async () => {
     try {
       await navigator.clipboard.writeText(prompt);
+      setStatus('Prompt copied to clipboard.');
     } catch {
-      window.prompt('Copy prompt manually:', prompt);
+      setStatus('Clipboard access is unavailable. Select and copy the generated prompt manually.');
     }
   };
 
   const exportJson = () => {
     const succeeded = exportConfigAsJson({ ...config, generatedPrompt: prompt });
     if (!succeeded) {
-      window.alert('Unable to export JSON in this browser context.');
+      setStatus('Unable to export JSON in this browser context.');
+      return;
     }
+    setStatus('JSON export started.');
   };
 
   return (
@@ -102,7 +110,7 @@ export default function CombinationLab() {
       </section>
 
       <div className="grid gap-4 xl:grid-cols-2">
-        <PromptOutput prompt={prompt} onCopy={copyPrompt} onExport={exportJson} />
+        <PromptOutput prompt={prompt} onCopy={copyPrompt} onExport={exportJson} status={status} />
         <BreakdownPanel config={config} epicScore={epicScore} />
       </div>
     </div>
